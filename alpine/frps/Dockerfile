@@ -1,4 +1,4 @@
-FROM snowdreamtech/go:1.23.1-alpine AS builder
+FROM golang:alpine AS builder
 
 ENV FRP_VERSION=0.61.0
 
@@ -14,7 +14,7 @@ RUN apk add --no-cache make \
     && cp -rfv bin conf /workspace/ 
 
 
-FROM snowdreamtech/alpine:3.20.3
+FROM alpine:latest
 
 # OCI annotations to image
 LABEL org.opencontainers.image.authors="Hazer" \
