@@ -21,12 +21,12 @@ LABEL org.opencontainers.image.authors="Hazer" \
     org.opencontainers.image.title="Frps Image Based On Alpine" \
     org.opencontainers.image.description="Docker Images for Frps on Alpine. (i386, amd64, arm32v6, arm32v7, arm64, ppc64le,riscv64, s390x)" \
     org.opencontainers.image.documentation="https://hub.docker.com/r/hazertothepast/frps" \
-    org.opencontainers.image.base.name="hazertothepast/frps:alpine" \
+    org.opencontainers.image.base.name="hazertothepast/frps" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.source="https://github.com/hazertothepast/frp" \
+    org.opencontainers.image.source="https://github.com/Hazer/frp" \
     org.opencontainers.image.vendor="Hazer" \
     org.opencontainers.image.version="0.61.0" \
-    org.opencontainers.image.url="https://github.com/hazertothepast/frp"
+    org.opencontainers.image.url="https://github.com/Hazer/frp"
 
 COPY --from=builder /workspace/bin/frps /usr/bin/
 COPY --from=builder /workspace/conf/frps.toml /etc/frp/
